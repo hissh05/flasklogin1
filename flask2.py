@@ -1,4 +1,4 @@
-from flask import Flask,render_template, request, , jsonify 
+from flask import Flask,render_template, request,jsonify 
 from datetime import timedelta
 
 
@@ -12,7 +12,7 @@ def login():
 		
 		user =request.form["nm"]
 		pword= request.form["ps"]
-		session["user"] = user
+		
 	
 		if len(pword) < 6:
 			return jsonify({'output':{"status":'201',"msg":'Failure: password should be of length 6'}})
